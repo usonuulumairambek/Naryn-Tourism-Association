@@ -1,0 +1,903 @@
+/* <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>АО НК "Kazakh Tourism" - Administration-Member</title>
+        <meta name="description" content="">
+        <meta name="title" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://qaztourism.kz/themes/demo/assets/js/jquery-3.4.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/css/uikit.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        		
+    </head>
+    
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>АО НК "Kazakh Tourism" - Administration-Member</title>
+        <meta name="description" content="">
+        <meta name="title" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://qaztourism.kz/themes/demo/assets/js/jquery-3.4.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/css/uikit.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        		
+    </head>
+<style>
+@font-face {font-family: "FuturaPT-Book";src: url("/themes/demo/assets/fonts/FuturaPT-Book.ttf") format("truetype");font-weight: 300;}
+@font-face {font-family: "Montserrat";src: url("/themes/demo/assets/fonts/Montserrat-Thin.ttf") format("truetype");font-weight: 200;}
+@font-face {font-family: "Montserrat";src: url("/themes/demo/assets/fonts/Montserrat-Light.ttf") format("truetype");font-weight: 300;}
+@font-face {font-family: "Montserrat";src: url("/themes/demo/assets/fonts/Montserrat-Regular.ttf") format("truetype");font-weight: 400;}
+@font-face {font-family: "Montserrat";src: url("/themes/demo/assets/fonts/Montserrat-Medium.ttf") format("truetype");font-weight: 500;}
+@font-face {font-family: "Montserrat";src: url("/themes/demo/assets/fonts/Montserrat-Bold.ttf") format("truetype");font-weight: 700;}
+html, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, .uk-heading-2xlarge, .uk-heading-large, .uk-heading-medium, .uk-heading-small, .uk-heading-xlarge, h2, h3, h4, h5, h6, a, .uk-button-primary {
+    font-family: 'FuturaPT-Book', sans-serif;
+}
+
+	
+	div, h2, h3, h4, h5, h6, h1 {
+		color: #fff;
+	}
+	
+	.single-director {
+		display: flex;
+		padding: 15px;
+	}
+	
+	.single-director .director-image {
+		width: 40%;
+		padding-right: 40px;
+	}
+	
+	.single-director .director-text {
+		width: 50%;
+	}
+	
+	
+	.single-director .director-image img {
+		width: 100%;
+	}
+
+@media (max-width:640px) {
+	.single-director {
+		padding: 15px;
+	}
+	
+	.single-director .director-image {
+		width: 100%;
+		padding-right: 0px;
+	}
+	
+	.single-director .director-text {
+		width: 100%;
+	}
+	
+    .uk-breadcrumb>:nth-child(n+2):not(.uk-first-column):before {
+        background-size: 100%;
+        width: 18px;
+        height: 8px;
+        margin: 0 5px !important;
+    }
+    .uk-accordion-title {
+        font-size: 17px;
+        line-height: 24px;
+        color: #fff;
+        overflow: hidden;
+        max-width: max-content;
+    }
+    .uk-accordion-title:hover {
+        color: #fff;
+    }
+    .uk-accordion p {
+        color: #fff;
+        font-size: 17px;
+        line-height: 24px;
+    }
+    .uk-accordion-title:before {
+        content: "";
+        width: 1.4em;
+        height: 1.4em;
+        margin-right: 10px;
+        float: left;
+        background-image: url(https://qaztourism.kz/themes/demo/assets/images/accordion-down.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        margin-left: -5px !important;
+    }
+    .uk-open>.uk-accordion-title:before {
+        background-image: url(https://qaztourism.kz/themes/demo/assets/images/accordion-right.svg);
+    }
+    .uk-accordion hr {
+        width: 100%;
+        margin-left: 30px;
+        border-top: 1px solid #f9b845;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+@media (min-width:1200px) {
+	.single-director {
+		padding: 15px;
+	}
+	
+	.single-director .director-image {
+		width: 30%;
+		padding-right: 20px;
+	}
+	
+	.single-director .director-text {
+		width: 70%;
+	}
+    .uk-container {
+        max-width: 905px;
+        padding-top: 180px;
+    }
+    .uk-breadcrumb >*>* {
+        font-size: 15px;
+        line-height: 18px;
+    }
+    .uk-subnav-pill>.uk-active>a {
+        border-bottom: 2px solid #f9b845 !important;
+    }
+    .uk-subnav-pill>li>a {
+        border-bottom: 2px solid gray;
+        color: #fff;
+        font-size: 17px !important;
+        line-height: 36px !important;
+        font-family: 'Montserrat', sans-serif;
+        background-color: rgba(0, 0, 0, 0);
+        font-weight: bold;
+        text-transform: none;
+        padding: 0 20px !important;
+    }
+    .uk-subnav-pill>li:first-child {
+        margin-left: 20px;
+    }
+    .uk-breadcrumb>:nth-child(n+2):not(.uk-first-column):before {
+        background-size: 100%;
+        width: 20px;
+        height: 8px;
+    }
+    body {
+        background-image: url(https://qaztourism.kz/themes/demo/assets/images/ornament.png); 
+        background-position: -310px 60vh; 
+        background-repeat: no-repeat;
+    }
+}
+@media (min-width:1366px) {
+	.single-director {
+		padding: 15px;
+	}
+	
+	.single-director .director-image {
+		width: 30%;
+		padding-right: 30px;
+	}
+	
+	.single-director .director-text {
+		width: 60%;
+	}
+    .uk-container {
+        max-width: 1080px;
+        padding-top: 180px;
+    }
+    .uk-breadcrumb >*>* {
+        display: inline-block;
+        font-size: 15px;
+        line-height: 18px;
+        color: #fff;
+    }
+    .uk-breadcrumb >:last-child>* {
+        color: #f9b845;
+    }
+    .margin-top {
+        margin-top: 40px;
+    }
+    .img-size-one img {
+        width: 172px;
+        height: 115px;
+    }
+    .img-size-two img {
+        width: 144px;
+        height: 145px;
+    }
+    .img-size-three img {
+        width: 346px;
+        height: 152px;
+    }
+    .img-size-four img {
+        width: 130px;
+    }
+    .uk-subnav-pill>.uk-active>a {
+        border-bottom: 2px solid #f9b845 !important;
+    }
+    .uk-subnav-pill>li>a {
+        border-bottom: 2px solid gray;
+        color: #fff;
+        font-size: 17px !important;
+        line-height: 36px !important;
+        font-family: 'Montserrat', sans-serif;
+        background-color: rgba(0, 0, 0, 0);
+        font-weight: bold;
+        text-transform: none;
+        padding: 0 40px !important;
+    }
+    .uk-subnav-pill>li:first-child {
+        margin-left:20px;
+    }
+    h5 {
+        color: #fff;
+        font-size: 21px;
+        line-height: 25px;
+    }
+    h2 {
+        color: #fff;
+        font-size: 23px;
+        line-height: 32px;
+        font-family: 'FuturaPT-Book', sans-serif;
+        font-weight: bold;
+    }
+    h3 {
+        color: #fff;
+        font-size: 23px;
+        line-height: 32px;
+        font-family: 'FuturaPT-Book', sans-serif;
+    }
+    .contacts span {
+        color: #fff;
+        font-size: 23px;
+        line-height: 32px;
+        font-family: 'FuturaPT-Book', sans-serif;
+        
+    }
+    #partners .uk-list {
+        font-size: 21px;
+        line-height: 23px;
+    }
+    .docs p {
+        font-size: 24px;
+        line-height: 32px;
+        color: #fff;
+        text-decoration: underline;
+    }
+    .partner-description {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    p {
+        margin: 0 0 35px 0;
+    }
+    .uk-breadcrumb>:nth-child(n+2):not(.uk-first-column):before {
+        background-size: 100%;
+        width: 20px;
+        height: 8px;
+    }
+    body {
+        background-image: url(https://qaztourism.kz/themes/demo/assets/images/ornament.png); 
+        background-position:-310px 60vh; 
+        background-repeat: no-repeat;
+    }
+}
+
+@media (min-width:1600px) {
+    .uk-container {
+        max-width: 1630px;
+        padding-top: 180px;
+    }
+    .uk-breadcrumb >*>* {
+        display: inline-block;
+        font-size: 24px;
+        line-height: 29px;
+        color: #fff;
+    }
+    .uk-breadcrumb >:last-child>* {
+        color: #f9b845;
+    }
+    .double-line {
+        width: 25%;
+    }
+    .margin-top {
+        margin-top: 65px;
+    }
+    .uk-subnav-pill>.uk-active>a {
+        border-bottom: 2px solid #f9b845 !important;
+    }
+    .uk-subnav-pill>li>a {
+        border-bottom: 1px solid gray;
+        color: #fff;
+        font-size: 32px !important;
+        line-height: 45px !important;
+        font-family: 'Montserrat', sans-serif;
+        background-color: rgba(0, 0, 0, 0);
+        font-weight:bold;
+        text-transform: none;
+        padding:0 50px !important;
+    }
+    .uk-subnav-pill>li:first-child {
+        margin-left: 20px;
+    }
+    h5 {
+        color:#fff;
+        font-size:21px;
+        line-height:25px;
+    }
+    h2 {
+        color:#fff;
+        font-size:23px;
+        line-height:32px;
+        font-family: 'FuturaPT-Book', sans-serif;
+        font-weight: bold;
+    }
+    h3 {
+        color:#fff;
+        font-size:23px;
+        line-height:32px;
+        font-family: 'FuturaPT-Book', sans-serif;
+    }
+    .contacts span {
+        color:#fff;
+        font-size:23px;
+        line-height:32px;
+        font-family: 'FuturaPT-Book', sans-serif;
+        
+    }
+    #partners .uk-list { 
+        font-size:21px;
+        line-height:23px;
+    }
+    .docs p {
+        font-size: 24px;
+        line-height:32px;
+        color:#fff;
+        text-decoration:underline;
+    }
+    .partner-description {
+        font-size: 24px;
+        line-height:32px;
+    }
+    p {
+        margin: 0 0 35px 0;
+    }
+    .uk-breadcrumb>:nth-child(n+2):not(.uk-first-column):before {
+        background-size: 100%;
+        width: 34px;
+        height: 14px;
+    }
+    body {
+        background-image: url(https://qaztourism.kz/themes/demo/assets/images/ornament.png); 
+        background-position:-310px 60vh; 
+        background-repeat: no-repeat;
+    }
+}
+
+.uk-breadcrumb >*>* {
+    display: inline-block;
+    color: #fff;
+}
+.uk-breadcrumb >:last-child>* {
+    color: #f9b845;
+}
+.uk-breadcrumb>:nth-child(n+2):not(.uk-first-column):before {
+    content: "";
+    display: inline-block;
+    margin: 0 20px;
+    background-image: url(https://qaztourism.kz/themes/demo/assets/images/arrow.svg) !important;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+</style>
+<body class="bg-dark" style="background-color:#2c4566;">
+    <div class="main">
+        <section>
+            <style>
+.main_nav {
+    padding: 40px 50px 30px 60px;
+}
+.onepage-wrap-pagin {
+    left: 30px;
+}
+.uk-navbar-container:not(.uk-navbar-transparent) {
+    background: rgba(255, 255, 255, 0.8);
+}
+.bg-dark .uk-navbar-container:not(.uk-navbar-transparent) {
+    background: rgb(44, 69, 102, 0.9);
+}
+.uk-navbar-nav>li>a {
+    font-size: 18px;
+    margin-right: 0px;
+}
+.uk-navbar-dropdown-nav>li>a {
+    font-size: 18px;
+}
+@media (min-width:640px) {
+    .uk-sticky-placeholder {
+        display: none;
+    }
+    .logo-blue, .logo-white {
+        width: 100px;
+    }
+}
+@media (min-width:1200px) {
+    .uk-navbar-left {
+        padding-left: 15px;
+    }
+    .uk-navbar-nav>li>a {
+        margin-right: 0px;
+        padding: 0 5px;
+        font-size: 15px;
+    }
+    .logo-blue, .logo-white {
+        width: 100px;
+    }
+}
+@media (min-width:1366px) {
+    .uk-navbar-nav>li>a {
+        margin-right: 0px;
+        padding: 0 10px;
+        font-size: 16px;
+    }
+    .logo-blue, .logo-white {
+        width: 120px;
+    }
+}
+@media (min-width:1600px) {
+    .uk-navbar-left {
+        padding-left: 65px;
+    }
+    .uk-navbar-nav>li>a {
+        font-size: 22px;
+        margin-right: 10px;
+    }
+    .uk-navbar-dropdown-nav>li>a {
+        font-size: 24x;
+    }
+}
+.logo-white {
+    display: none;   
+}
+.bg-dark .logo-white {
+    display: inline;   
+}
+.logo-blue {
+    display: inline;   
+}
+.bg-dark .logo-blue {
+    display: none;   
+}
+.nav-last-logo {
+    border-radius: 10px;
+    padding: 5px 20px 5px 20px;
+}
+.nav-last-logo.logo-blue {
+    border: 2px solid #2c4566;
+}
+.nav-last-logo.logo-white {
+    border: 2px solid #fff;
+}
+.uk-navbar-nav li>a:hover, .uk-navbar-nav>li:hover>a, .uk-navbar-nav>li>a.uk-open, .uk-navbar-nav>li>a:focus {
+    color: #f9b845;
+}
+.bg-dark .uk-navbar-nav li>a:hover, .bg-dark .uk-navbar-nav>li:hover>a, .bg-dark .uk-navbar-nav>li>a.uk-open, .bg-dark .uk-navbar-nav>li>a:focus {
+    color: #f9b845;
+}
+.bg-dark .uk-navbar-nav>li>a {
+    color: #fff;
+}
+.uk-navbar-nav>li>a {
+    color: #2c4566;
+    text-transform: none;
+}
+.uk-navbar-dropdown-nav>li {
+    padding: 12px 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.uk-navbar-dropdown-nav>li:last-child {
+    border-bottom: none;
+}
+.uk-navbar-dropdown-nav>li>a {
+    color: #fff;   
+}
+.uk-navbar-dropdown {
+    background: rgb(44, 69, 102, 0.9);
+    border-radius: 3px;
+}
+#nav-mob {
+    padding: 15px;   
+}
+#nav-mob .uk-nav-default>li>a {
+    padding: 15px 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #2C4566;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+}
+#nav-mob .uk-nav-default .uk-nav-sub a {
+    color: #2C4566;
+    font-size: 16px;
+}
+#nav-mob .uk-nav-sub a {
+    padding: 5px 0;   
+}
+#nav-mob ul.uk-nav-sub {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left: 2px solid #2C4566;
+}
+#nav-mob span.uk-icon {
+    color: #2C4566;
+    margin-right: 35px;
+}
+#nav-mob .uk-nav-parent-icon>.uk-parent>a::after {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%232C4566%22%20stroke-width%3D%221.1%22%20points%3D%2210%201%204%207%2010%2013%22%20%2F%3E%0A%3C%2Fsvg%3E")
+}
+#nav-mob .uk-nav-parent-icon>.uk-parent.uk-open>a::after {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%232C4566%22%20stroke-width%3D%221.1%22%20points%3D%221%204%207%2010%2013%204%22%20%2F%3E%0A%3C%2Fsvg%3E")
+}
+#nav-mob .nav-open-top {
+    margin-bottom: 25px;   
+}
+#nav-mob .nav-open-top a {
+    font-size: 16px;
+    font-weight: 900;
+    margin-right: 15px;
+    color: #2C4566;
+}
+.nav-mobile a.uk-navbar-toggle svg, .nav-mobile .uk-close svg {
+    color: #2C4566;
+    fill: #2C4566;
+}
+.bg-dark a.uk-navbar-toggle svg {
+    color: #fff;
+    fill: #fff;
+}
+.nav-mobile .uk-close svg line {
+    stroke-width: 2px;   
+}
+</style>
+<!-- NAV -->
+<nav class="nav-mobile uk-navbar uk-navbar-container uk-hidden@s" uk-navbar uk-sticky>
+    <div class="uk-margin-left uk-margin-top">
+        <a href="/" class="uk-logo" href="">
+		    <img class="logo-blue" src="https://qaztourism.kz/themes/demo/assets/images/logo.png" alt="qaztourism.kz">
+		    <img class="logo-white" src="https://qaztourism.kz/themes/demo/assets/images/logo_white.png" alt="qaztourism.kz">
+		</a>
+    </div>
+    <div class="uk-navbar-right">
+        <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#" uk-toggle="target: #nav-mob; animation: uk-animation-slide-top, uk-animation-slide-bottom"></a>
+    </div>
+    <div id="nav-mob" class="uk-position-fixed uk-position-z-index uk-width-1-1 uk-background-default" style="top: 0;" hidden>
+        <div class="nav-open-top uk-width-1-1 uk-child-width-1-2 uk-flex uk-flex-middle">
+            <div class="uk-flex uk-flex-left">
+                <a data-request="onSwitchLocale" data-request-data="locale: 'ru'">Рус</a>
+                <a data-request="onSwitchLocale" data-request-data="locale: 'kk'">Қаз</a>
+                <a data-request="onSwitchLocale" data-request-data="locale: 'en'">Eng</a>
+            </div>
+            <div class="uk-flex uk-flex-right">
+                <button type="button" uk-close uk-toggle="target: #nav-mob; animation: uk-animation-slide-bottom, uk-animation-slide-top"></button>
+            </div>
+        </div>
+                            <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
+                                                            <li class="uk-parent ">
+                            <a href="">О компании</a>
+                            <ul class="uk-nav-sub">
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/about-company">Деятельность</a></li>
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/administration">Руководство</a></li>
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/corporate-management">Корпоративное управление</a></li>
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/zakupki">Закупки</a></li>
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/partners">Партнеры</a></li>
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/vacancy">Вакансии</a></li>
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/report">Отчетность</a></li>
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/people">Работа с населением</a></li>
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/antikorrupcionnaya-kompleans-sluzhba">Антикоррупционная комплаенс служба</a></li>
+                                                            </ul>
+                        </li>
+                        			                                            <li class="uk-parent ">
+                            <a href="">Наши проекты</a>
+                            <ul class="uk-nav-sub">
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/expeditions">Экспедиции</a></li>
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/festivals">Фестивали</a></li>
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/promote-projects">Проекты по продвижению</a></li>
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/analytics">Аналитика</a></li>
+                                                            </ul>
+                        </li>
+                        			                                            <li class=""><a href="https://qaztourism.kz/ru/about-kazakhstan">О Казахстане</a></li>
+                        			                                            <li class=""><a href="https://qaztourism.kz/ru/investment-opportunities">Для инвесторов</a></li>
+                        			                                            <li class=""><a href="https://qaztourism.kz/ru/announce">Для турсообщества</a></li>
+                        			                                            <li class=""><a href="https://qaztourism.kz/ru/blog">Новости</a></li>
+                        			                                            <li class=""><a href="https://qaztourism.kz/ru/contacts">Контакты</a></li>
+                        			    			<li>
+    			    <a href="https://kazakhstan.travel/">
+    			        <img class="logo-blue" src="https://qaztourism.kz/themes/demo/assets/images/kaztravel.png" alt="kazakhstan.travel">
+    			        <img class="logo-white" src="https://qaztourism.kz/themes/demo/assets/images/kaztravel_white.png" alt="kazakhstan.travel">
+    			    </a>
+                </li>
+    			<li>
+                    <a href="https://www.facebook.com/traveltokazakhstan" style="display: initial;"><span uk-icon="icon: facebook;"></span></a>
+                    <a href="https://www.instagram.com/kazakhtourism_official/" style="display: initial;"><span uk-icon="icon: instagram;"></span></a>
+                    <a href="https://www.youtube.com/kazakhstantravel" style="display: initial;"><span uk-icon="icon: youtube;"></span></a>
+                </li>
+            </ul>
+            </div>
+</nav>
+
+<div class="uk-visible@s" uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-box-shadow-medium uk-navbar-sticky; cls-inactive: uk-navbar-transparent;">
+	<nav class="uk-navbar-container uk-navbar-transparent main_nav" uk-navbar>
+		<div class="uk-navbar-left">
+			<div class="uk-navbar-item">
+				<a href="/" class="uk-logo" href="">
+				    <img class="logo-blue" src="https://qaztourism.kz/themes/demo/assets/images/logo.png" alt="qaztourism.kz">
+				    <img class="logo-white" src="https://qaztourism.kz/themes/demo/assets/images/logo_white.png" alt="qaztourism.kz">
+				</a>
+			</div>
+		</div>
+		<div class="uk-navbar-right">
+    		                			<ul class="uk-navbar-nav uk-text-center">
+    			            				<li class="">
+        				    <a href="">О компании</a>
+        				                				    <div class="uk-navbar-dropdown uk-padding-remove">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/about-company">Деятельность</a></li>
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/administration">Руководство</a></li>
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/corporate-management">Корпоративное управление</a></li>
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/zakupki">Закупки</a></li>
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/partners">Партнеры</a></li>
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/vacancy">Вакансии</a></li>
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/report">Отчетность</a></li>
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/people">Работа с населением</a></li>
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/antikorrupcionnaya-kompleans-sluzhba">Антикоррупционная комплаенс служба</a></li>
+                                                                            </ul>
+                                </div>
+                                    				</li>
+    				        				<li class="">
+        				    <a href="">Наши проекты</a>
+        				                				    <div class="uk-navbar-dropdown uk-padding-remove">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/expeditions">Экспедиции</a></li>
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/festivals">Фестивали</a></li>
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/promote-projects">Проекты по продвижению</a></li>
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/analytics">Аналитика</a></li>
+                                                                            </ul>
+                                </div>
+                                    				</li>
+    				        				<li class="">
+        				    <a href="https://qaztourism.kz/ru/about-kazakhstan">О Казахстане</a>
+        				            				</li>
+    				        				<li class="">
+        				    <a href="https://qaztourism.kz/ru/investment-opportunities">Для инвесторов</a>
+        				            				</li>
+    				        				<li class="">
+        				    <a href="https://qaztourism.kz/ru/announce">Для турсообщества</a>
+        				            				</li>
+    				        				<li class="">
+        				    <a href="https://qaztourism.kz/ru/blog">Новости</a>
+        				            				</li>
+    				        				<li class="">
+        				    <a href="https://qaztourism.kz/ru/contacts">Контакты</a>
+        				            				</li>
+    				    			</ul>
+    					<div class="uk-navbar-item">
+				<a href="https://kazakhstan.travel/" href="">
+				    <img class="logo-blue nav-last-logo" src="https://qaztourism.kz/themes/demo/assets/images/kaztravel.png" alt="kazakhstan.travel">
+			        <img class="logo-white nav-last-logo" src="https://qaztourism.kz/themes/demo/assets/images/kaztravel_white.png" alt="kazakhstan.travel">
+			    </a>
+			</div>
+		</div>
+	</nav>
+</div>
+<!-- /NAV -->            <style>
+.right_nav {
+    right: 50px;
+    top: 30%;
+    z-index: 999;
+}
+.bg-light .right_nav li a {
+    color: #2c4566;   
+}
+.right_nav li a {
+    color: #fff;   
+}
+.bg-light .right_nav hr {
+    border-left-color: #2c4566;
+    border-left: 2px solid #2c4566;
+}
+.right_nav hr {
+    border-left-color: #fff;
+    border-left: 2px solid #fff;
+}
+</style>
+<ul class="right_nav uk-list uk-position-fixed uk-visible@l">
+    <hr class="uk-divider-vertical">
+    <li><a data-request="onSwitchLocale" data-request-data="locale: 'ru'">Рус</a></li>
+    <li><a data-request="onSwitchLocale" data-request-data="locale: 'kk'">Каз</a></li>
+    <li><a data-request="onSwitchLocale" data-request-data="locale: 'en'">Eng</a></li>
+    <li><a href="https://www.facebook.com/traveltokazakhstan"><span uk-icon="icon: facebook"></span></a></li>
+    <li><a href="https://www.instagram.com/kazakhtourism_official/"><span uk-icon="icon: instagram"></span></a></li>
+    <li><a href="https://www.youtube.com/kazakhstantravel"><span uk-icon="icon: youtube"></span></a></li>
+</ul>                
+							Not found
+						
+			            <div id="partners" class="uk-dark uk-background-norepeat uk-background-cover uk-background-center-center" >
+                <div class="">
+                    <div class="uk-container uk-flex uk-flex-column">
+            	        <div class="">
+            	            <ul class="uk-breadcrumb">
+                                <li><a href="#">О компании</a></li>
+                                <li><a href="/administration">Руководство</a></li>
+								<li><a href="">Еркинбаев Ержан Маликович</a></li>
+                            </ul>
+            	        </div>
+            	        <div class="" data-uk-height-viewport>
+                            <div class="uk-visible@m single-director margin-top">
+								<div class="director-image">
+									<img src="https://qaztourism.kz/storage/app/uploads/public/60f/a97/405/60fa97405ab39377016542.png">
+								</div>
+								<div class="director-text">
+									<h1 class="director-name">
+										Еркинбаев Ержан Маликович
+									</h1>
+									<h4 class="uk-text-left main-text director-description"> 
+										Член Совета директоров, Председатель Правления АО «НК «Kazakh Tourism».
+									</h4>
+									<h4 class="uk-text-left main-text director-description"> 
+										<p><span color="" style="background-color: transparent; font-family: -apple-system, BlinkMacSystemFont, ;">Родился 7 июня 1982 года.</span></p>
+
+<p>Окончил Казахский Гуманитарно-Юридический Университет по специальности «Юриспруденция», Парижскую школу бизнеса «HEC» степень МBA, Российскую академию народного хозяйства и государственной службы при Президенте РФ, региональный и муниципальный менеджмент.</p>
+
+<p>Трудовую деятельность начал в 2002 года в должности Руководителя департамента гостиничных проектов «Capital Partners».</p>
+
+<p>С 2009 по 2019 годы - Генеральный директор горнолыжного курорта «Шымбулак».</p>
+
+<p>С 2013 по 2016 годы - Генеральный директор высокогорного спорткомплекса «Медеу».</p>
+
+<p>С 2018 года по настоящее время - Руководитель частного международного фонда по сохранению снежного барса «Snow Leopard Foundation».</p>
+
+<p>С октября 2019 года по настоящее время - Председатель Правления АО «НК «Kazakh Tourism».</p>
+
+<p>Прочие должности:</p>
+
+<p>· &nbsp; &nbsp; Независимый &nbsp; директор &nbsp; международных &nbsp; британских &nbsp; школ &nbsp; Haileybury &nbsp; UK</p>
+
+<p>Выборные должности, депутатство:</p>
+
+<p>· &nbsp; &nbsp; Депутат маслихата города Алматы шестого созыва.</p>
+									</h4>
+								</div>
+							</div>
+							<div class="uk-hidden@m margin-top">
+								<div style="width: 100%; margin-bottom: 20px">
+									<img src="https://qaztourism.kz/storage/app/uploads/public/60f/a97/405/60fa97405ab39377016542.png">
+								</div>
+								<div class="director-text">
+									<h1 class="director-name">
+										Еркинбаев Ержан Маликович
+									</h1>
+									<h4 class="uk-text-left main-text director-description"> 
+										Член Совета директоров, Председатель Правления АО «НК «Kazakh Tourism».
+									</h4>
+									<h4 class="uk-text-left main-text director-description"> 
+										<p><span color="" style="background-color: transparent; font-family: -apple-system, BlinkMacSystemFont, ;">Родился 7 июня 1982 года.</span></p>
+
+<p>Окончил Казахский Гуманитарно-Юридический Университет по специальности «Юриспруденция», Парижскую школу бизнеса «HEC» степень МBA, Российскую академию народного хозяйства и государственной службы при Президенте РФ, региональный и муниципальный менеджмент.</p>
+
+<p>Трудовую деятельность начал в 2002 года в должности Руководителя департамента гостиничных проектов «Capital Partners».</p>
+
+<p>С 2009 по 2019 годы - Генеральный директор горнолыжного курорта «Шымбулак».</p>
+
+<p>С 2013 по 2016 годы - Генеральный директор высокогорного спорткомплекса «Медеу».</p>
+
+<p>С 2018 года по настоящее время - Руководитель частного международного фонда по сохранению снежного барса «Snow Leopard Foundation».</p>
+
+<p>С октября 2019 года по настоящее время - Председатель Правления АО «НК «Kazakh Tourism».</p>
+
+<p>Прочие должности:</p>
+
+<p>· &nbsp; &nbsp; Независимый &nbsp; директор &nbsp; международных &nbsp; британских &nbsp; школ &nbsp; Haileybury &nbsp; UK</p>
+
+<p>Выборные должности, депутатство:</p>
+
+<p>· &nbsp; &nbsp; Депутат маслихата города Алматы шестого созыва.</p>
+									</h4>
+								</div>
+							</div>
+    	                </div>
+    		    	</div>
+			    </div>
+            </div>
+			        </section>
+        <section>
+            <style>
+@media (min-width: 1200px) {
+    footer {
+        padding: 50px 60px;
+    }
+}
+@media (max-width: 640px) {
+    footer {
+        padding: 5px 0 20px 0;
+    }
+    footer ul {
+        padding: 0;
+    }
+}
+footer {
+    background-color: #2C4566;
+}
+footer ul {
+    list-style: none;   
+}
+footer ul li, footer ul li a {
+    color: #fff;
+    font-size: 12px;
+}
+footer ul li a:hover {
+    color: #f9b845;
+}
+footer ul li a {
+    text-decoration: underline;   
+}
+
+@media (min-width:1600px) {
+    footer ul li, footer ul li a {
+    color: #fff;
+    font-size: 20px;
+}
+}
+</style>
+<footer class="uk-width-expand uk-margin-large-top">
+    <div class="uk-child-width-1-4@s uk-text-center uk-text-left@s" uk-grid>
+        <div class="uk-visible@s"><img src="https://qaztourism.kz/themes/demo/assets/images/logo_white.png" alt="Logo" style="width: 120px;"></div>
+        <div class="uk-visible@s">
+            <ul>
+                <li><h3 style='color:white;font-weight:bold'>Полезные ссылки</h3></li>
+                <li><a href="https://qaztourism.kz/ru/vacancy">Вакансии</a></li>
+                <li><a href="https://qaztourism.kz/ru/contacts">Обратная связь</a></li>
+                <li><a href="https://kazakhstan.travel/">Kazakhstan.travel</a></li>
+            </ul>
+        </div>
+        <div class="uk-visible@s">
+            <ul>
+                <li>Нур-Султан, проспект Мангилик Ел, 55/14</li>
+<!--                <li>Приемная: +7 (7172) 91-95-00</li>
+                <li>Канцелярия: +7 (7172) 91-95-38</li>-->
+                <li>Телефон доверия: 8 708 485 9146</li>
+                <li>Электронная почта: info@qaztourism.kz</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>АО "НК "Kazakh Tourism" (с) 2020</li><br />
+                <li>
+                    <a href="https://www.facebook.com/traveltokazakhstan"><span uk-icon="icon: facebook;"></span></a>
+                    <a href="https://www.instagram.com/kazakhtourism_official/"><span uk-icon="icon: instagram;"></span></a>
+                    <a href="https://www.youtube.com/kazakhstantravel"><span uk-icon="icon: youtube;"></span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer> 
+        </section>
+    </div>
+     
+    <!-- JS FILES -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/js/uikit.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/js/uikit-icons.min.js"></script>
+</body>
+
+    <script src="/modules/system/assets/js/framework.js"></script>
+<script src="/modules/system/assets/js/framework.extras.js"></script>
+<link rel="stylesheet" property="stylesheet" href="/modules/system/assets/css/framework.extras.css">
+    
+</html>
+    <script src="/modules/system/assets/js/framework.js"></script>
+<script src="/modules/system/assets/js/framework.extras.js"></script>
+<link rel="stylesheet" property="stylesheet" href="/modules/system/assets/css/framework.extras.css">
+    
+</html> */

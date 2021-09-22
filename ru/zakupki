@@ -1,0 +1,1009 @@
+/* <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>АО НК "Kazakh Tourism" - Закупки</title>
+        <meta name="description" content="">
+        <meta name="title" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://qaztourism.kz/themes/demo/assets/js/jquery-3.4.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/css/uikit.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        		
+    </head>
+<style>
+@font-face {font-family: "FuturaPT-Book";src: url("/themes/demo/assets/fonts/FuturaPT-Book.ttf") format("truetype");font-weight: 300;}
+@font-face {font-family: "Montserrat";src: url("/themes/demo/assets/fonts/Montserrat-Thin.ttf") format("truetype");font-weight: 200;}
+@font-face {font-family: "Montserrat";src: url("/themes/demo/assets/fonts/Montserrat-Light.ttf") format("truetype");font-weight: 300;}
+@font-face {font-family: "Montserrat";src: url("/themes/demo/assets/fonts/Montserrat-Regular.ttf") format("truetype");font-weight: 400;}
+@font-face {font-family: "Montserrat";src: url("/themes/demo/assets/fonts/Montserrat-Medium.ttf") format("truetype");font-weight: 500;}
+@font-face {font-family: "Montserrat";src: url("/themes/demo/assets/fonts/Montserrat-Bold.ttf") format("truetype");font-weight: 700;}
+html, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, .uk-heading-2xlarge, .uk-heading-large, .uk-heading-medium, .uk-heading-small, .uk-heading-xlarge, h2, h3, h4, h5, h6, a, .uk-button-primary {font-family: 'FuturaPT-Book', sans-serif;}
+.uk-h2, h1, h4, h5, h3, .mont-h {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+@media (max-width:640px) {
+    .uk-breadcrumb>:nth-child(n+2):not(.uk-first-column):before {
+        background-size: 100%;
+        width: 18px;
+        height: 8px;
+        margin: 0 5px !important;
+    }
+    .uk-accordion-title {
+        font-size: 17px;
+        line-height: 24px;
+        color: #fff;
+        overflow: hidden;
+        max-width: max-content;
+    }
+    .uk-accordion-title:hover {
+        color: #fff;
+    }
+    .uk-accordion-title::before {
+        margin-left: -5px !important;
+    }
+    .uk-accordion p {
+        color:#fff;
+        font-size: 17px;
+        line-height: 24px;
+    }
+    .uk-accordion-title:before {
+        content: "";
+        width: 1.4em;
+        height: 1.4em;
+        margin-right: 10px;
+        float: left;
+        background-image: url(https://qaztourism.kz/themes/demo/assets/images/accordion-down.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        margin-left: -5px !important;
+    }
+    .uk-open>.uk-accordion-title:before {
+        background-image: url(https://qaztourism.kz/themes/demo/assets/images/accordion-right.svg);
+    }
+    .uk-accordion hr {
+        width: 100%;
+        margin-left: 30px;
+        border-top: 1px solid #f9b845;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    h2 {
+        color: #fff;
+        font-size: 17px;
+        line-height: 20px;
+        font-family: 'FuturaPT-Book', sans-serif;
+        font-weight: bold;
+    }
+    h3 {
+        color: #fff;
+        font-size: 17px;
+        line-height: 20px;
+        font-family: 'FuturaPT-Book', sans-serif;
+        margin: 0;
+    }
+}
+
+@media (min-width:1200px) {
+    .uk-container {
+        max-width: 905px;
+        padding-top: 180px;
+    }
+    .uk-breadcrumb >*>* {
+        display: inline-block;
+        font-size: 15px;
+        line-height: 18px;
+        color: #fff;
+    }
+    .uk-breadcrumb >:last-child>* {
+        color: #f9b845;
+    }
+    .uk-subnav-pill>.uk-active>a {
+        border-bottom: 2px solid #f9b845 !important;
+    }
+    .uk-subnav-pill>li>a {
+        border-bottom: 2px solid gray;
+        color: #fff;
+        font-size: 17px !important;
+        line-height: 36px !important;
+        font-family: 'Montserrat', sans-serif;
+        background-color: rgba(0, 0, 0, 0);
+        font-weight: bold;
+        text-transform: none;
+        padding:0 40px !important;
+    }
+    .uk-subnav-pill>li:first-child {
+        margin-left: 20px;
+    }
+    h5 {
+        color: #fff;
+        font-size: 21px;
+        line-height: 25px;
+    }
+    h2 {
+        color: #fff;
+        font-size: 16px;
+        line-height: 32px;
+        font-family: 'FuturaPT-Book', sans-serif;
+        font-weight: bold;
+    }
+    h3 {
+        color: #fff;
+        font-size: 16px;
+        line-height: 32px;
+        font-family: 'FuturaPT-Book', sans-serif;
+    }
+    .contacts span {
+        color: #fff;
+        font-size: 16px;
+        line-height: 32px;
+        font-family: 'FuturaPT-Book', sans-serif;
+        
+    }
+    #zakupki .uk-list {
+        font-size: 21px;
+        line-height: 23px;
+    }
+    .docs p {
+        font-size: 16px;
+        line-height: 32px;
+        color: #fff;
+        text-decoration: underline;
+    }
+    .uk-breadcrumb>:nth-child(n+2):not(.uk-first-column):before {
+        background-size: 100%;
+        width: 20px;
+        height: 8px;
+    }
+    body {
+        background-image: url(https://qaztourism.kz/themes/demo/assets/images/ornament.png); 
+        background-position: -310px 60vh; 
+        background-repeat: no-repeat;
+    }
+}
+
+@media (min-width:1366px) {
+    .uk-container {
+        max-width: 1080px;
+        padding-top: 180px;
+    }
+    .uk-breadcrumb >*>* {
+        display: inline-block;
+        font-size: 15px;
+        line-height: 18px;
+        color: #fff;
+    }
+    .uk-breadcrumb >:last-child>* {
+        color: #f9b845;
+    }
+    .uk-subnav-pill>.uk-active>a {
+        border-bottom: 2px solid #f9b845 !important;
+    }
+    .uk-subnav-pill>li>a {
+        border-bottom: 2px solid gray;
+        color: #fff;
+        font-size: 17px !important;
+        line-height: 36px !important;
+        font-family: 'Montserrat', sans-serif;
+        background-color: rgba(0, 0, 0, 0);
+        font-weight: bold;
+        text-transform: none;
+        padding: 0 40px !important;
+    }
+    .uk-subnav-pill>li:first-child {
+        margin-left: 20px;
+    }
+    h5 {
+        color: #fff;
+        font-size: 21px;
+        line-height: 25px;
+    }
+    h2 {
+        color: #fff;
+        font-size: 16px;
+        line-height: 32px;
+        font-family: 'FuturaPT-Book', sans-serif;
+        font-weight: bold;
+    }
+    h3 {
+        color: #fff;
+        font-size: 16px;
+        line-height: 32px;
+        font-family: 'FuturaPT-Book', sans-serif;
+    }
+    .contacts span {
+        color: #fff;
+        font-size: 16px;
+        line-height: 32px;
+        font-family: 'FuturaPT-Book', sans-serif;
+        
+    }
+    #zakupki .uk-list {
+        font-size: 21px;
+        line-height: 23px;
+    }
+    .docs p {
+        font-size: 16px;
+        line-height: 32px;
+        color: #fff;
+        text-decoration: underline;
+    }
+    .uk-breadcrumb>:nth-child(n+2):not(.uk-first-column):before {
+        background-size: 100%;
+        width: 20px;
+        height: 8px;
+    }
+    body {
+        background-image: url(https://qaztourism.kz/themes/demo/assets/images/ornament.png); 
+        background-position: -310px 60vh; 
+        background-repeat: no-repeat;
+    }
+}
+@media (min-width:1600px) {
+    .uk-container {
+        max-width: 1630px;
+        padding-top: 180px;
+    }
+    .uk-breadcrumb >*>* {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .uk-breadcrumb >:last-child>* {
+        color: #f9b845;
+    }
+    .uk-subnav-pill>.uk-active>a {
+        border-bottom: 2px solid #f9b845 !important;
+    }
+    .uk-subnav-pill>li>a {
+        border-bottom: 1px solid gray;
+        color: #fff;
+        font-size: 32px !important;
+        line-height: 60px !important;
+        font-family: 'Montserrat', sans-serif;
+        background-color: rgba(0, 0, 0, 0);
+        font-weight: bold;
+        text-transform: none;
+        padding:0 50px !important;
+    }
+    .uk-subnav-pill>li:first-child {
+        margin-left: 20px;
+    }
+    h5 {
+        color: #fff;
+        font-size: 21px;
+        line-height: 25px;
+    }
+    h2 {
+        color: #fff;
+        font-size: 24px;
+        line-height: 32px;
+        font-family: 'FuturaPT-Book', sans-serif;
+        font-weight: bold;
+    }
+    h3 {
+        color: #fff;
+        font-size: 24px;
+        line-height: 32px;
+        font-family: 'FuturaPT-Book', sans-serif;
+    }
+    .contacts span {
+        color: #fff;
+        font-size: 24px;
+        line-height: 32px;
+        font-family: 'FuturaPT-Book', sans-serif;
+        
+    }
+    #zakupki .uk-list {
+        font-size: 21px;
+        line-height: 23px;
+    }
+    .docs p {
+        font-size: 24px;
+        line-height: 32px;
+        color: #fff;
+        text-decoration: underline;
+    }
+    
+    .docs ul>li {
+        margin-bottom: 20px;
+    }
+    .uk-table th {
+        color: #f9b845;
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .uk-table td {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .uk-breadcrumb>:nth-child(n+2):not(.uk-first-column):before {
+        background-size: 100%;
+        width: 34px;
+        height: 14px;
+    }
+    body {
+        background-image: url(https://qaztourism.kz/themes/demo/assets/images/ornament.png); 
+        background-position:-310px 60vh; 
+        background-repeat: no-repeat;
+    }
+}
+a {
+    color: #ffffff;
+}
+.uk-breadcrumb >*>* {
+    display: inline-block;
+    color: #fff;
+}
+.uk-breadcrumb >:last-child>* {
+    color: #f9b845;
+}
+.uk-breadcrumb>:nth-child(n+2):not(.uk-first-column):before {
+    content: "";
+    display: inline-block;
+    margin: 0 20px;
+    background-image: url(https://qaztourism.kz/themes/demo/assets/images/arrow.svg) !important;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.uk-table th {
+    color: #f9b845;
+    text-transform: none;
+    font-weight: bold;
+}
+.uk-table td {
+    color: #fff;
+}
+.uk-subnav-pill>*>a:focus, .uk-subnav-pill>*>a:hover, .uk-subnav-pill>.uk-active>a {
+    color: #f9b845;
+    background-color: transparent;
+}
+.uk-subnav-pill>li {
+    padding:0;
+}
+.uk-subnav-pill>*>:first-child {
+    color: #fff;
+    font-weight: bold;
+    text-transform: none;
+}
+.uk-accordion-content {
+    color: #fff;
+}
+.uk-accordion-title {
+    color: #fff;
+}
+.uk-accordion-content .docs p {
+    font-size: 16px;
+    line-height: 32px;
+    color: #fff;
+    text-decoration: underline;
+}
+.uk-accordion-title: hover {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+}
+.uk-breadcrumb >*>* {
+    display: inline-block;
+    color: #fff;
+}
+.uk-breadcrumb >:last-child>* {
+    color: #f9b845;
+}
+.uk-accordion-title::before {
+    content: "";
+    width: 1.4em;
+    height: 1.4em;
+    margin-right: 10px;
+    float: left;
+    background-image: url(https://qaztourism.kz/themes/demo/assets/images/accordion-down.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.uk-open>.uk-accordion-title:before {
+    background-image: url(https://qaztourism.kz/themes/demo/assets/images/accordion-right.svg);
+}
+</style>
+    <body class="bg-dark" style="background-color:#2c4566;">
+        <div class="main">
+            <section>
+            <style>
+.main_nav {
+    padding: 40px 50px 30px 60px;
+}
+.onepage-wrap-pagin {
+    left: 30px;
+}
+.uk-navbar-container:not(.uk-navbar-transparent) {
+    background: rgba(255, 255, 255, 0.8);
+}
+.bg-dark .uk-navbar-container:not(.uk-navbar-transparent) {
+    background: rgb(44, 69, 102, 0.9);
+}
+.uk-navbar-nav>li>a {
+    font-size: 18px;
+    margin-right: 0px;
+}
+.uk-navbar-dropdown-nav>li>a {
+    font-size: 18px;
+}
+@media (min-width:640px) {
+    .uk-sticky-placeholder {
+        display: none;
+    }
+    .logo-blue, .logo-white {
+        width: 100px;
+    }
+}
+@media (min-width:1200px) {
+    .uk-navbar-left {
+        padding-left: 15px;
+    }
+    .uk-navbar-nav>li>a {
+        margin-right: 0px;
+        padding: 0 5px;
+        font-size: 15px;
+    }
+    .logo-blue, .logo-white {
+        width: 100px;
+    }
+}
+@media (min-width:1366px) {
+    .uk-navbar-nav>li>a {
+        margin-right: 0px;
+        padding: 0 10px;
+        font-size: 16px;
+    }
+    .logo-blue, .logo-white {
+        width: 120px;
+    }
+}
+@media (min-width:1600px) {
+    .uk-navbar-left {
+        padding-left: 65px;
+    }
+    .uk-navbar-nav>li>a {
+        font-size: 22px;
+        margin-right: 10px;
+    }
+    .uk-navbar-dropdown-nav>li>a {
+        font-size: 24x;
+    }
+}
+.logo-white {
+    display: none;   
+}
+.bg-dark .logo-white {
+    display: inline;   
+}
+.logo-blue {
+    display: inline;   
+}
+.bg-dark .logo-blue {
+    display: none;   
+}
+.nav-last-logo {
+    border-radius: 10px;
+    padding: 5px 20px 5px 20px;
+}
+.nav-last-logo.logo-blue {
+    border: 2px solid #2c4566;
+}
+.nav-last-logo.logo-white {
+    border: 2px solid #fff;
+}
+.uk-navbar-nav li>a:hover, .uk-navbar-nav>li:hover>a, .uk-navbar-nav>li>a.uk-open, .uk-navbar-nav>li>a:focus {
+    color: #f9b845;
+}
+.bg-dark .uk-navbar-nav li>a:hover, .bg-dark .uk-navbar-nav>li:hover>a, .bg-dark .uk-navbar-nav>li>a.uk-open, .bg-dark .uk-navbar-nav>li>a:focus {
+    color: #f9b845;
+}
+.bg-dark .uk-navbar-nav>li>a {
+    color: #fff;
+}
+.uk-navbar-nav>li>a {
+    color: #2c4566;
+    text-transform: none;
+}
+.uk-navbar-dropdown-nav>li {
+    padding: 12px 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.uk-navbar-dropdown-nav>li:last-child {
+    border-bottom: none;
+}
+.uk-navbar-dropdown-nav>li>a {
+    color: #fff;   
+}
+.uk-navbar-dropdown {
+    background: rgb(44, 69, 102, 0.9);
+    border-radius: 3px;
+}
+#nav-mob {
+    padding: 15px;   
+}
+#nav-mob .uk-nav-default>li>a {
+    padding: 15px 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #2C4566;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+}
+#nav-mob .uk-nav-default .uk-nav-sub a {
+    color: #2C4566;
+    font-size: 16px;
+}
+#nav-mob .uk-nav-sub a {
+    padding: 5px 0;   
+}
+#nav-mob ul.uk-nav-sub {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left: 2px solid #2C4566;
+}
+#nav-mob span.uk-icon {
+    color: #2C4566;
+    margin-right: 35px;
+}
+#nav-mob .uk-nav-parent-icon>.uk-parent>a::after {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%232C4566%22%20stroke-width%3D%221.1%22%20points%3D%2210%201%204%207%2010%2013%22%20%2F%3E%0A%3C%2Fsvg%3E")
+}
+#nav-mob .uk-nav-parent-icon>.uk-parent.uk-open>a::after {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%232C4566%22%20stroke-width%3D%221.1%22%20points%3D%221%204%207%2010%2013%204%22%20%2F%3E%0A%3C%2Fsvg%3E")
+}
+#nav-mob .nav-open-top {
+    margin-bottom: 25px;   
+}
+#nav-mob .nav-open-top a {
+    font-size: 16px;
+    font-weight: 900;
+    margin-right: 15px;
+    color: #2C4566;
+}
+.nav-mobile a.uk-navbar-toggle svg, .nav-mobile .uk-close svg {
+    color: #2C4566;
+    fill: #2C4566;
+}
+.bg-dark a.uk-navbar-toggle svg {
+    color: #fff;
+    fill: #fff;
+}
+.nav-mobile .uk-close svg line {
+    stroke-width: 2px;   
+}
+</style>
+<!-- NAV -->
+<nav class="nav-mobile uk-navbar uk-navbar-container uk-hidden@s" uk-navbar uk-sticky>
+    <div class="uk-margin-left uk-margin-top">
+        <a href="/" class="uk-logo" href="">
+		    <img class="logo-blue" src="https://qaztourism.kz/themes/demo/assets/images/logo.png" alt="qaztourism.kz">
+		    <img class="logo-white" src="https://qaztourism.kz/themes/demo/assets/images/logo_white.png" alt="qaztourism.kz">
+		</a>
+    </div>
+    <div class="uk-navbar-right">
+        <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#" uk-toggle="target: #nav-mob; animation: uk-animation-slide-top, uk-animation-slide-bottom"></a>
+    </div>
+    <div id="nav-mob" class="uk-position-fixed uk-position-z-index uk-width-1-1 uk-background-default" style="top: 0;" hidden>
+        <div class="nav-open-top uk-width-1-1 uk-child-width-1-2 uk-flex uk-flex-middle">
+            <div class="uk-flex uk-flex-left">
+                <a data-request="onSwitchLocale" data-request-data="locale: 'ru'">Рус</a>
+                <a data-request="onSwitchLocale" data-request-data="locale: 'kk'">Қаз</a>
+                <a data-request="onSwitchLocale" data-request-data="locale: 'en'">Eng</a>
+            </div>
+            <div class="uk-flex uk-flex-right">
+                <button type="button" uk-close uk-toggle="target: #nav-mob; animation: uk-animation-slide-bottom, uk-animation-slide-top"></button>
+            </div>
+        </div>
+                            <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
+                                                            <li class="uk-parent uk-active">
+                            <a href="">О компании</a>
+                            <ul class="uk-nav-sub">
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/about-company">Деятельность</a></li>
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/administration">Руководство</a></li>
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/corporate-management">Корпоративное управление</a></li>
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/zakupki">Закупки</a></li>
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/partners">Партнеры</a></li>
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/vacancy">Вакансии</a></li>
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/report">Отчетность</a></li>
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/people">Работа с населением</a></li>
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/antikorrupcionnaya-kompleans-sluzhba">Антикоррупционная комплаенс служба</a></li>
+                                                            </ul>
+                        </li>
+                        			                                            <li class="uk-parent ">
+                            <a href="">Наши проекты</a>
+                            <ul class="uk-nav-sub">
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/expeditions">Экспедиции</a></li>
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/festivals">Фестивали</a></li>
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/promote-projects">Проекты по продвижению</a></li>
+                                                                    <li class=""><a href="https://qaztourism.kz/ru/analytics">Аналитика</a></li>
+                                                            </ul>
+                        </li>
+                        			                                            <li class=""><a href="https://qaztourism.kz/ru/about-kazakhstan">О Казахстане</a></li>
+                        			                                            <li class=""><a href="https://qaztourism.kz/ru/investment-opportunities">Для инвесторов</a></li>
+                        			                                            <li class=""><a href="https://qaztourism.kz/ru/announce">Для турсообщества</a></li>
+                        			                                            <li class=""><a href="https://qaztourism.kz/ru/blog">Новости</a></li>
+                        			                                            <li class=""><a href="https://qaztourism.kz/ru/contacts">Контакты</a></li>
+                        			    			<li>
+    			    <a href="https://kazakhstan.travel/">
+    			        <img class="logo-blue" src="https://qaztourism.kz/themes/demo/assets/images/kaztravel.png" alt="kazakhstan.travel">
+    			        <img class="logo-white" src="https://qaztourism.kz/themes/demo/assets/images/kaztravel_white.png" alt="kazakhstan.travel">
+    			    </a>
+                </li>
+    			<li>
+                    <a href="https://www.facebook.com/traveltokazakhstan" style="display: initial;"><span uk-icon="icon: facebook;"></span></a>
+                    <a href="https://www.instagram.com/kazakhtourism_official/" style="display: initial;"><span uk-icon="icon: instagram;"></span></a>
+                    <a href="https://www.youtube.com/kazakhstantravel" style="display: initial;"><span uk-icon="icon: youtube;"></span></a>
+                </li>
+            </ul>
+            </div>
+</nav>
+
+<div class="uk-visible@s" uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-box-shadow-medium uk-navbar-sticky; cls-inactive: uk-navbar-transparent;">
+	<nav class="uk-navbar-container uk-navbar-transparent main_nav" uk-navbar>
+		<div class="uk-navbar-left">
+			<div class="uk-navbar-item">
+				<a href="/" class="uk-logo" href="">
+				    <img class="logo-blue" src="https://qaztourism.kz/themes/demo/assets/images/logo.png" alt="qaztourism.kz">
+				    <img class="logo-white" src="https://qaztourism.kz/themes/demo/assets/images/logo_white.png" alt="qaztourism.kz">
+				</a>
+			</div>
+		</div>
+		<div class="uk-navbar-right">
+    		                			<ul class="uk-navbar-nav uk-text-center">
+    			            				<li class="uk-active">
+        				    <a href="">О компании</a>
+        				                				    <div class="uk-navbar-dropdown uk-padding-remove">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/about-company">Деятельность</a></li>
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/administration">Руководство</a></li>
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/corporate-management">Корпоративное управление</a></li>
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/zakupki">Закупки</a></li>
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/partners">Партнеры</a></li>
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/vacancy">Вакансии</a></li>
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/report">Отчетность</a></li>
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/people">Работа с населением</a></li>
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/antikorrupcionnaya-kompleans-sluzhba">Антикоррупционная комплаенс служба</a></li>
+                                                                            </ul>
+                                </div>
+                                    				</li>
+    				        				<li class="">
+        				    <a href="">Наши проекты</a>
+        				                				    <div class="uk-navbar-dropdown uk-padding-remove">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/expeditions">Экспедиции</a></li>
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/festivals">Фестивали</a></li>
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/promote-projects">Проекты по продвижению</a></li>
+                                                                                    <li class=""><a href="https://qaztourism.kz/ru/analytics">Аналитика</a></li>
+                                                                            </ul>
+                                </div>
+                                    				</li>
+    				        				<li class="">
+        				    <a href="https://qaztourism.kz/ru/about-kazakhstan">О Казахстане</a>
+        				            				</li>
+    				        				<li class="">
+        				    <a href="https://qaztourism.kz/ru/investment-opportunities">Для инвесторов</a>
+        				            				</li>
+    				        				<li class="">
+        				    <a href="https://qaztourism.kz/ru/announce">Для турсообщества</a>
+        				            				</li>
+    				        				<li class="">
+        				    <a href="https://qaztourism.kz/ru/blog">Новости</a>
+        				            				</li>
+    				        				<li class="">
+        				    <a href="https://qaztourism.kz/ru/contacts">Контакты</a>
+        				            				</li>
+    				    			</ul>
+    					<div class="uk-navbar-item">
+				<a href="https://kazakhstan.travel/" href="">
+				    <img class="logo-blue nav-last-logo" src="https://qaztourism.kz/themes/demo/assets/images/kaztravel.png" alt="kazakhstan.travel">
+			        <img class="logo-white nav-last-logo" src="https://qaztourism.kz/themes/demo/assets/images/kaztravel_white.png" alt="kazakhstan.travel">
+			    </a>
+			</div>
+		</div>
+	</nav>
+</div>
+<!-- /NAV -->            <style>
+.right_nav {
+    right: 50px;
+    top: 30%;
+    z-index: 999;
+}
+.bg-light .right_nav li a {
+    color: #2c4566;   
+}
+.right_nav li a {
+    color: #fff;   
+}
+.bg-light .right_nav hr {
+    border-left-color: #2c4566;
+    border-left: 2px solid #2c4566;
+}
+.right_nav hr {
+    border-left-color: #fff;
+    border-left: 2px solid #fff;
+}
+</style>
+<ul class="right_nav uk-list uk-position-fixed uk-visible@l">
+    <hr class="uk-divider-vertical">
+    <li><a data-request="onSwitchLocale" data-request-data="locale: 'ru'">Рус</a></li>
+    <li><a data-request="onSwitchLocale" data-request-data="locale: 'kk'">Каз</a></li>
+    <li><a data-request="onSwitchLocale" data-request-data="locale: 'en'">Eng</a></li>
+    <li><a href="https://www.facebook.com/traveltokazakhstan"><span uk-icon="icon: facebook"></span></a></li>
+    <li><a href="https://www.instagram.com/kazakhtourism_official/"><span uk-icon="icon: instagram"></span></a></li>
+    <li><a href="https://www.youtube.com/kazakhstantravel"><span uk-icon="icon: youtube"></span></a></li>
+</ul>                <div id="zakupki" class="uk-dark uk-background-norepeat uk-background-cover uk-background-center-center">
+        	        <div class="">
+        	         <div class="uk-container uk-flex uk-flex-column" data-uk-height-viewport>
+            	        <div class="uk-margin">
+            	            <ul class="uk-breadcrumb">
+                                <li><a href="#">О компании</a></li>
+                                <li><a href="#">Закупки</a></li>
+                            </ul>
+            	        </div>
+            	        <div style="font-size: 20px;">
+            	            <p style="color: #fff;">Централизованная служба по контролю за закупками (далее – Служба) создана решением Совета директоров в реализацию Закона РК                                         «О государственном имуществе».</p>
+<p style="color: #fff;">Потенциальные поставщики Общества, столкнувшиеся с нарушением правил проведения закупок, вправе обжаловать действия или бездействия, решения заказчика в порядке и сроки, установленные статьей 186-4 Закона             «О госимуществе».  Жалобу на действия (бездействия), решения Общества, проводящего закупки, можно подать в Службу по адресу: Республика Казахстан, город Нур-Султан, пр. Мангилик ел, 55/14 C2.2 этаж 2, кабинет 2.2.2. Также жалобу можно подать посредством информационной системы электронных закупок.
+</p>
+            	        </div>
+            	        <div class="uk-visible@s">
+                            <ul class="uk-subnav uk-subnav-pill" uk-switcher>
+                                <li><a href="#">Нормативно-правовые акты</a></li>
+                                <li><a href="#">Планы закупок</a></li>
+                                <!--<li><a href="#">Текущие закупки</a></li>-->
+                            </ul>
+                            
+                            <ul class="uk-switcher uk-margin">
+                                <li>
+                                    <div class="uk-child-width-1-1" uk-grid>
+                                        <div class="uk-text-left docs uk-flex uk-flex-center uk-margin-large-top">
+                                            
+                                                
+
+                                                
+
+                                                
+                                            <ul class="uk-list">
+                                                                                                    <li class="uk-grid"><span><img src="https://qaztourism.kz/themes/demo/assets/images/pdf.svg"></span><p><a href="https://qaztourism.kz/storage/app/media/zakupki/protsedura-s-izmeneniyami-dopolneniyami-ot-24-maya-2021-goda-novaya-redaktsiya.docx">Процедура осуществления закупок АО &quot;НК &quot;Kazakh Tourism&quot; 2021 год</a></p></li>
+                                                                                                    <li class="uk-grid"><span><img src="https://qaztourism.kz/themes/demo/assets/images/pdf.svg"></span><p><a href="https://qaztourism.kz/storage/app/media/zakupki/Pravila/%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%20c%20%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F%D0%BC%D0%B8%20%D0%BE%D1%82%2023122020.doc">Правила осуществления закупок товаров, работ, услуг с изменениями и дополнениями), внесенными приказом Первого заместителя Премьер-Министра РК  – Министра финансов РК от 04.04.2020 № 352</a></p></li>
+                                                                                                    <li class="uk-grid"><span><img src="https://qaztourism.kz/themes/demo/assets/images/pdf.svg"></span><p><a href="https://qaztourism.kz/storage/app/media/zakupki/zakon-respubliki-kazakhstan-ot-8-iyunya-2021-goda-no-47-vii-zrk.docx">Закон Республики Казахстан от 8 июня 2021 года № 47-VII ЗРК. &quot;О закупках отдельных субъектов квазигосударственного сектора</a></p></li>
+                                                                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="uk-child-width-1-2 uk-margin-large-top" uk-grid>
+                                        
+                                        
+                                        
+                                        
+                                        <div class="uk-width-2-5 uk-text-left">
+                                            <h2>Ответственные лица по вопросам закупок</h2>
+                                            <h3>Главный менеджер Аппарата:</br>
+                                            <span style="color:#f9b845">Устимиров Ильяс Нурланович</span> </h3>
+                                            <div class="contacts uk-child-width-1-1 uk-margin">
+                                                <div class="uk-margin"><span><img src="https://qaztourism.kz/themes/demo/assets/images/mail.svg"></span> <span style="margin-left:20px;">i.ustimirov@qaztourism.kz</span></div>
+                                                <div><span><img src="https://qaztourism.kz/themes/demo/assets/images/call-answer.svg"></span> <span style="margin-left:20px;"></span></div>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-expand uk-text-left uk-flex uk-flex-center">
+                                            <div class="uk-text-left docs">
+                                                <hr style="border-top:2px solid #fff;width:10%;"></hr>
+                                                
+                                                    
+
+                                                    
+
+                                                    
+
+                                                    
+
+                                                    
+
+                                                    
+
+                                                    
+
+                                                    
+
+                                                    
+
+                                                    
+
+                                                    
+                                                <ul class="uk-list">
+                                                                                                            <li class="uk-grid"><span><img src="https://qaztourism.kz/themes/demo/assets/images/xlsx.svg"></span><p><a href="https://qaztourism.kz/storage/app/media/zakupki/%D0%90%D1%80%D1%85%D0%B8%D0%B2%20%D0%BF%D0%BB%D0%B0%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%20%D0%B7%D0%B0%202019%20%D0%B3/Plan%20zakupok%202019.rar">Архив плана закупок за 2019 год</a></p></li>
+                                                                                                            <li class="uk-grid"><span><img src="https://qaztourism.kz/themes/demo/assets/images/xlsx.svg"></span><p><a href="https://qaztourism.kz/storage/app/media/zakupki/Plan%20zakupok%202020%20%D0%B3/%20%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%20%D0%BD%D0%B0%202020%20%D0%B3%D0%BE%D0%B4.rar">Архив плана закупок за 2020 год</a></p></li>
+                                                                                                            <li class="uk-grid"><span><img src="https://qaztourism.kz/themes/demo/assets/images/xlsx.svg"></span><p><a href="https://qaztourism.kz/storage/app/media/zakupki/Plan%20zakupok%202020%20%D0%B3/%D0%9F%D0%BB%D0%B0%D0%BD%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%202021%20%D0%B3%D0%BE%D0%B4/%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%20%D0%BD%D0%B0%202021%20%D0%B3%D0%BE%D0%B4.xlsx">Утвержденный План закупок АО «НК «Kazakh Tourism» на 2021 год</a></p></li>
+                                                                                                            <li class="uk-grid"><span><img src="https://qaztourism.kz/themes/demo/assets/images/xlsx.svg"></span><p><a href="https://qaztourism.kz/storage/app/media/zakupki/Plan%20zakupok%202020%20%D0%B3/%D0%9F%D0%BB%D0%B0%D0%BD%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%202021%20%D0%B3%D0%BE%D0%B4/zakupok-na-2021-god-s-izmeneniyami-ot-25022021.xlsx">План закупок с изменениями от 25.02.2021</a></p></li>
+                                                                                                            <li class="uk-grid"><span><img src="https://qaztourism.kz/themes/demo/assets/images/xlsx.svg"></span><p><a href="https://qaztourism.kz/storage/app/media/zakupki/Plan%20zakupok%202020%20%D0%B3/%D0%9F%D0%BB%D0%B0%D0%BD%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%202021%20%D0%B3%D0%BE%D0%B4/zakupok-na-2021-god-s-izmeneniyami-ot-10032021.xlsx">План закупок с изменениями от 10.03.2021</a></p></li>
+                                                                                                            <li class="uk-grid"><span><img src="https://qaztourism.kz/themes/demo/assets/images/xlsx.svg"></span><p><a href="https://qaztourism.kz/storage/app/media/%D0%9F%D0%BB%D0%B0%D0%BD%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%202021/plan-zakupok-tovarov-rabot-uslug-na-2021-god-s-izmeneniyami-ot-22042021.xlsx">План закупок с изменениями от 22.04.2021</a></p></li>
+                                                                                                            <li class="uk-grid"><span><img src="https://qaztourism.kz/themes/demo/assets/images/xlsx.svg"></span><p><a href="https://qaztourism.kz/storage/app/media/%D0%9F%D0%BB%D0%B0%D0%BD%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%202021/zakupok-na-2021-god-s-izmeneniyami-ot-06052021.xlsx">План закупок с изменениями от 06.05.2021</a></p></li>
+                                                                                                            <li class="uk-grid"><span><img src="https://qaztourism.kz/themes/demo/assets/images/xlsx.svg"></span><p><a href="https://qaztourism.kz/storage/app/media/%D0%9F%D0%BB%D0%B0%D0%BD%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%202021/zakupok-na-2021-god-s-izmeneniyami-ot-17062021.xlsx">План закупок на 2021 год (с изменениями от 17.06.2021)</a></p></li>
+                                                                                                            <li class="uk-grid"><span><img src="https://qaztourism.kz/themes/demo/assets/images/xlsx.svg"></span><p><a href="https://qaztourism.kz/storage/app/media/%D0%9F%D0%BB%D0%B0%D0%BD%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%202021/zakupok-na-2021-god-s-izmeneniyami-ot-29062021.xlsx">План закупок на 2021 год (с изменениями от 29.06.2021)</a></p></li>
+                                                                                                            <li class="uk-grid"><span><img src="https://qaztourism.kz/themes/demo/assets/images/xlsx.svg"></span><p><a href="https://qaztourism.kz/storage/app/media/%D0%9F%D0%BB%D0%B0%D0%BD%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%202021/zakupok-na-2021-god-s-izmeneniyami-ot-06082021.xlsx">План закупок на 2021 год (с изменениями от 06.08.2021)</a></p></li>
+                                                                                                            <li class="uk-grid"><span><img src="https://qaztourism.kz/themes/demo/assets/images/xlsx.svg"></span><p><a href="https://qaztourism.kz/storage/app/media/%D0%9F%D0%BB%D0%B0%D0%BD%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%202021/zakupok-na-2021-god-s-izmeneniyami-ot-31082021.xlsx">План закупок на 2021 год (с изменениями от 31.08.2021)</a></p></li>
+                                                                                                    </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!--<<li>
+                                    <div class="uk-overflow-auto">
+                                        <table class="uk-table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="uk-table-expand">Наименование</th>
+                                                    <th class="uk-width-small">Дата публикации</th>
+                                                    <th class="uk-width-medium">Вид закупки</th>
+                                                </tr>
+                                            </thead>
+                                                                                        <tbody>
+                                                                                            </tbody>
+                                        </table>
+                                    </div>
+                                </li>-->
+                            </ul>
+            	        </div>
+            	        
+            	        <!-- Accordion -->
+            	        <div class="uk-hidden@s uk-padding-remove" uk-height-viewport>
+                            <ul uk-accordion>
+                                <li class="uk-open">
+                                    <a class="uk-accordion-title uk-text-left" href="#">Нормативно-правовые акты<hr></a>
+                                    <div class="uk-accordion-content">
+                                        <div class="uk-child-width-1-1" uk-grid>
+                                            <div class="uk-text-left docs uk-margin-large uk-flex uk-flex-center">
+                                                <ul class="uk-list">
+                                                                                                            <li class="uk-grid"><span><img class="uk-width-auto" src="https://qaztourism.kz/themes/demo/assets/images/pdf.svg"></span><p class="uk-width-expand"><a href="https://qaztourism.kz/storage/app/media/zakupki/protsedura-s-izmeneniyami-dopolneniyami-ot-24-maya-2021-goda-novaya-redaktsiya.docx">Процедура осуществления закупок АО &quot;НК &quot;Kazakh Tourism&quot; 2021 год</a></p></li>
+                                                                                                            <li class="uk-grid"><span><img class="uk-width-auto" src="https://qaztourism.kz/themes/demo/assets/images/pdf.svg"></span><p class="uk-width-expand"><a href="https://qaztourism.kz/storage/app/media/zakupki/Pravila/%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%20c%20%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F%D0%BC%D0%B8%20%D0%BE%D1%82%2023122020.doc">Правила осуществления закупок товаров, работ, услуг с изменениями и дополнениями), внесенными приказом Первого заместителя Премьер-Министра РК  – Министра финансов РК от 04.04.2020 № 352</a></p></li>
+                                                                                                            <li class="uk-grid"><span><img class="uk-width-auto" src="https://qaztourism.kz/themes/demo/assets/images/pdf.svg"></span><p class="uk-width-expand"><a href="https://qaztourism.kz/storage/app/media/zakupki/zakon-respubliki-kazakhstan-ot-8-iyunya-2021-goda-no-47-vii-zrk.docx">Закон Республики Казахстан от 8 июня 2021 года № 47-VII ЗРК. &quot;О закупках отдельных субъектов квазигосударственного сектора</a></p></li>
+                                                                                                    </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title uk-text-left" href="#">Планы закупок<hr></a>
+                                    <div class="uk-accordion-content">
+                                        <div class="uk-child-width-1-1" uk-grid>
+                                            <div class="uk-width-1-1 uk-text-left">
+                                                <h2>Ответственные лица по вопросам закупок</h2>
+                                                <h3>Главный менеджер Аппарата:</br>
+                                                <span style="color:#f9b845">Устимиров Ильяс Нурланович</span> </h3>
+                                                <div class="contacts uk-child-width-1-1 uk-margin">
+                                                    <div class="uk-margin"><span><img src="https://qaztourism.kz/themes/demo/assets/images/mail.svg"></span> <span style="margin-left:20px;">i.ustimirov@qaztourism.kz</span></div>
+                                                    <div><span><img src="https://qaztourism.kz/themes/demo/assets/images/call-answer.svg"></span> <span style="margin-left:20px;"></span></div>
+                                                </div>
+                                            </div>
+                                            <div class="uk-width-expand uk-text-left uk-flex uk-flex-center">
+                                               <div class="uk-text-left docs uk-margin-large">
+                                                <hr>
+                                                    <ul class="uk-list">
+                                                                                                                    <li class="uk-grid"><span><img class="uk-width-auto" src="https://qaztourism.kz/themes/demo/assets/images/xlsx.svg"></span><p class="uk-width-expand"><a href="https://qaztourism.kz/storage/app/media/zakupki/%D0%90%D1%80%D1%85%D0%B8%D0%B2%20%D0%BF%D0%BB%D0%B0%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%20%D0%B7%D0%B0%202019%20%D0%B3/Plan%20zakupok%202019.rar">Архив плана закупок за 2019 год</a></p></li>
+                                                                                                                    <li class="uk-grid"><span><img class="uk-width-auto" src="https://qaztourism.kz/themes/demo/assets/images/xlsx.svg"></span><p class="uk-width-expand"><a href="https://qaztourism.kz/storage/app/media/zakupki/Plan%20zakupok%202020%20%D0%B3/%20%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%20%D0%BD%D0%B0%202020%20%D0%B3%D0%BE%D0%B4.rar">Архив плана закупок за 2020 год</a></p></li>
+                                                                                                                    <li class="uk-grid"><span><img class="uk-width-auto" src="https://qaztourism.kz/themes/demo/assets/images/xlsx.svg"></span><p class="uk-width-expand"><a href="https://qaztourism.kz/storage/app/media/zakupki/Plan%20zakupok%202020%20%D0%B3/%D0%9F%D0%BB%D0%B0%D0%BD%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%202021%20%D0%B3%D0%BE%D0%B4/%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%20%D0%BD%D0%B0%202021%20%D0%B3%D0%BE%D0%B4.xlsx">Утвержденный План закупок АО «НК «Kazakh Tourism» на 2021 год</a></p></li>
+                                                                                                                    <li class="uk-grid"><span><img class="uk-width-auto" src="https://qaztourism.kz/themes/demo/assets/images/xlsx.svg"></span><p class="uk-width-expand"><a href="https://qaztourism.kz/storage/app/media/zakupki/Plan%20zakupok%202020%20%D0%B3/%D0%9F%D0%BB%D0%B0%D0%BD%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%202021%20%D0%B3%D0%BE%D0%B4/zakupok-na-2021-god-s-izmeneniyami-ot-25022021.xlsx">План закупок с изменениями от 25.02.2021</a></p></li>
+                                                                                                                    <li class="uk-grid"><span><img class="uk-width-auto" src="https://qaztourism.kz/themes/demo/assets/images/xlsx.svg"></span><p class="uk-width-expand"><a href="https://qaztourism.kz/storage/app/media/zakupki/Plan%20zakupok%202020%20%D0%B3/%D0%9F%D0%BB%D0%B0%D0%BD%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%202021%20%D0%B3%D0%BE%D0%B4/zakupok-na-2021-god-s-izmeneniyami-ot-10032021.xlsx">План закупок с изменениями от 10.03.2021</a></p></li>
+                                                                                                                    <li class="uk-grid"><span><img class="uk-width-auto" src="https://qaztourism.kz/themes/demo/assets/images/xlsx.svg"></span><p class="uk-width-expand"><a href="https://qaztourism.kz/storage/app/media/%D0%9F%D0%BB%D0%B0%D0%BD%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%202021/plan-zakupok-tovarov-rabot-uslug-na-2021-god-s-izmeneniyami-ot-22042021.xlsx">План закупок с изменениями от 22.04.2021</a></p></li>
+                                                                                                                    <li class="uk-grid"><span><img class="uk-width-auto" src="https://qaztourism.kz/themes/demo/assets/images/xlsx.svg"></span><p class="uk-width-expand"><a href="https://qaztourism.kz/storage/app/media/%D0%9F%D0%BB%D0%B0%D0%BD%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%202021/zakupok-na-2021-god-s-izmeneniyami-ot-06052021.xlsx">План закупок с изменениями от 06.05.2021</a></p></li>
+                                                                                                                    <li class="uk-grid"><span><img class="uk-width-auto" src="https://qaztourism.kz/themes/demo/assets/images/xlsx.svg"></span><p class="uk-width-expand"><a href="https://qaztourism.kz/storage/app/media/%D0%9F%D0%BB%D0%B0%D0%BD%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%202021/zakupok-na-2021-god-s-izmeneniyami-ot-17062021.xlsx">План закупок на 2021 год (с изменениями от 17.06.2021)</a></p></li>
+                                                                                                                    <li class="uk-grid"><span><img class="uk-width-auto" src="https://qaztourism.kz/themes/demo/assets/images/xlsx.svg"></span><p class="uk-width-expand"><a href="https://qaztourism.kz/storage/app/media/%D0%9F%D0%BB%D0%B0%D0%BD%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%202021/zakupok-na-2021-god-s-izmeneniyami-ot-29062021.xlsx">План закупок на 2021 год (с изменениями от 29.06.2021)</a></p></li>
+                                                                                                                    <li class="uk-grid"><span><img class="uk-width-auto" src="https://qaztourism.kz/themes/demo/assets/images/xlsx.svg"></span><p class="uk-width-expand"><a href="https://qaztourism.kz/storage/app/media/%D0%9F%D0%BB%D0%B0%D0%BD%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%202021/zakupok-na-2021-god-s-izmeneniyami-ot-06082021.xlsx">План закупок на 2021 год (с изменениями от 06.08.2021)</a></p></li>
+                                                                                                                    <li class="uk-grid"><span><img class="uk-width-auto" src="https://qaztourism.kz/themes/demo/assets/images/xlsx.svg"></span><p class="uk-width-expand"><a href="https://qaztourism.kz/storage/app/media/%D0%9F%D0%BB%D0%B0%D0%BD%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BE%D0%BA%202021/zakupok-na-2021-god-s-izmeneniyami-ot-31082021.xlsx">План закупок на 2021 год (с изменениями от 31.08.2021)</a></p></li>
+                                                                                                            </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title uk-text-left" href="#">Текущие закупки<hr></a>
+                                    <div class="uk-accordion-content uk-text-left">
+                                         <div class="uk-overflow-auto">
+                                            <table class="uk-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="uk-table-expand">Наименование</th>
+                                                        <th class="uk-width-small">Дата публикации</th>
+                                                        <th class="uk-width-medium">Вид закупки</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                                                                    </tbody>
+                                            </table>
+                                        </div>   
+                                    </div>   
+                                </li>
+                            </ul>
+            	        </div>
+        			</div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <style>
+@media (min-width: 1200px) {
+    footer {
+        padding: 50px 60px;
+    }
+}
+@media (max-width: 640px) {
+    footer {
+        padding: 5px 0 20px 0;
+    }
+    footer ul {
+        padding: 0;
+    }
+}
+footer {
+    background-color: #2C4566;
+}
+footer ul {
+    list-style: none;   
+}
+footer ul li, footer ul li a {
+    color: #fff;
+    font-size: 12px;
+}
+footer ul li a:hover {
+    color: #f9b845;
+}
+footer ul li a {
+    text-decoration: underline;   
+}
+
+@media (min-width:1600px) {
+    footer ul li, footer ul li a {
+    color: #fff;
+    font-size: 20px;
+}
+}
+</style>
+<footer class="uk-width-expand uk-margin-large-top">
+    <div class="uk-child-width-1-4@s uk-text-center uk-text-left@s" uk-grid>
+        <div class="uk-visible@s"><img src="https://qaztourism.kz/themes/demo/assets/images/logo_white.png" alt="Logo" style="width: 120px;"></div>
+        <div class="uk-visible@s">
+            <ul>
+                <li><h3 style='color:white;font-weight:bold'>Полезные ссылки</h3></li>
+                <li><a href="https://qaztourism.kz/ru/vacancy">Вакансии</a></li>
+                <li><a href="https://qaztourism.kz/ru/contacts">Обратная связь</a></li>
+                <li><a href="https://kazakhstan.travel/">Kazakhstan.travel</a></li>
+            </ul>
+        </div>
+        <div class="uk-visible@s">
+            <ul>
+                <li>Нур-Султан, проспект Мангилик Ел, 55/14</li>
+<!--                <li>Приемная: +7 (7172) 91-95-00</li>
+                <li>Канцелярия: +7 (7172) 91-95-38</li>-->
+                <li>Телефон доверия: 8 708 485 9146</li>
+                <li>Электронная почта: info@qaztourism.kz</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>АО "НК "Kazakh Tourism" (с) 2020</li><br />
+                <li>
+                    <a href="https://www.facebook.com/traveltokazakhstan"><span uk-icon="icon: facebook;"></span></a>
+                    <a href="https://www.instagram.com/kazakhtourism_official/"><span uk-icon="icon: instagram;"></span></a>
+                    <a href="https://www.youtube.com/kazakhstantravel"><span uk-icon="icon: youtube;"></span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer> 
+        </section>
+    </div>
+    <!-- JS FILES -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/js/uikit.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/js/uikit-icons.min.js"></script>
+</body>
+
+    <script src="/modules/system/assets/js/framework.js"></script>
+<script src="/modules/system/assets/js/framework.extras.js"></script>
+<link rel="stylesheet" property="stylesheet" href="/modules/system/assets/css/framework.extras.css">
+    
+</html> */
